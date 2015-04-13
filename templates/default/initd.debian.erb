@@ -19,7 +19,7 @@ LOGFIlE=<%= @log_file %>
 DESC="start/stop Solr Server"
 NAME=solr
 DAEMON=/usr/bin/java
-DAEMON_ARGS="-Xms128M -Xmx512M -Dsolr.solr.home=$SOLR_HOME -Djetty.port=$PORT -jar start.jar"
+DAEMON_ARGS="<%= @mem_options %> -Dsolr.solr.home=$SOLR_HOME -Djetty.port=$PORT -jar start.jar"
 SCRIPTNAME=/etc/init.d/$NAME
 
 # Exit gracefully if the package is not installed
