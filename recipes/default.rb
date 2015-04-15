@@ -61,7 +61,7 @@ template '/etc/init.d/solr' do
     :port => node['solr']['port'],
     :pid_file => node['solr']['pid_file'],
     :log_file => node['solr']['log_file'],
-    :mem_options => default['solr']['mem_start_options']
+    :mem_options => node['solr']['mem_start_options']
   )
 end
 
